@@ -32,7 +32,7 @@ Book-quick(ブックイック)
 |      (表示)            | 投稿の一覧表示                     |
 |                        | 書籍名表示                         |
 |                        | 書籍の画像表示                     |
-|                        | 著者名の表示
+|                        | 著者名の表示                       |
 |                        | あらすじの表示                     |
 |                        | 投稿者名表示                       |
 |                        | アプリケーション名                 |
@@ -147,3 +147,76 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## users テーブル
+
+| Column             | Type       | Options           |
+| ------------------ | ---------- | ----------------- |
+| nickname           | string     | null: false       |
+| name               | string     | null: false       |
+| name_kana          | string     | null: false       |
+| email              | string     | null: false       |
+| encrypted_password | string     | null: false       |
+| birth              | date       | null: false       |
+
+### Associations
+
+- has_many :books
+- has_many :comments
+
+## books テーブル
+
+| Column            | Type         | Options           |
+| ----------------- | ------------ | ----------------- |
+| title             | string       | null: false       |
+| link_to_buy       | string       | null: false       |
+| story             | text         | null: false       |
+| review            | text         | null: false       |
+| genre_id          | integer      | null: false       |
+| user              | references   | foreign_key: true |
+
+
+### Associations
+
+- belongs_to :user
+- has_many :comments
+- has_many :authors, through :book_authors
+- has_many :book_authors
+
+## authors テーブル
+
+| Column           | Type           | Options         |
+| ---------------- | -------------- | --------------- |
+| name             | string         | null: false     |
+
+### Associations
+
+- has_many :books, through :book_authors
+- has_many :book_authors
+
+## book_authors テーブル
+
+| Column           | Type           | Options                        |
+| ---------------- | -------------- | ------------------------------ |
+| book             | references     | null :false, foreign_key: true |
+| author           | references     | null :false, foreign_key: true |
+
+### Associations
+
+- belongs_to :book
+- belongs_to :author
+
+## comments テーブル
+
+| Column           | Type           | Options                        |
+| ---------------- | -------------- | ------------------------------ |
+| content          | string         |                                |
+| user             | references     | null :false, foreign_key: true |
+| book             | references     | null :false, foreign_key: true |
+
+### Associations
+
+- belongs_to :user
+- belongs_to :book
+
+
