@@ -1,0 +1,13 @@
+.footer {
+  width: 100vw;
+  padding: 5vh 0;
+  color: #FFF;
+  background-color: #7d6d6d;
+  text-align: center;
+}
+
+.footer-contents {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5vh;
+}

@@ -1,0 +1,34 @@
+.main {
+  background: #f8f8f8;
+}
+
+.title-contents {
+  width: 100vw;
+  background-image: image-url('book-quick-header01.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 15vh 5vw;
+  color: #333333;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.book-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.book-contents>.title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: lighter;
+}
+
+
