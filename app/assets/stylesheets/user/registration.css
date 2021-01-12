@@ -73,3 +73,13 @@
   line-height: 60px;
   padding: 0 5px;
 }
+
+.register-red-btn {
+  width: 100%;
+  background: #9c9696;
+  border: 1px solid #9f9998;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
