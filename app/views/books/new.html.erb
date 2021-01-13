@@ -1,8 +1,9 @@
 <%= render "shared/header" %> 
+<div class="book-contents">
 
-  <div class="items-sell-main">
+  <div class="book-main">
     <h2 class="items-sell-title">書籍の投稿内容を入力してください</h2>
-    <%# <%= form_with model: @item, local: true do |f| %>
+    <%= form_with model: @book, local: true do |f| %>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
     <%# <%= render 'shared/error_messages', model: f.object %>
@@ -18,24 +19,24 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field "image", id:"book-image" %>
+        <%= f.file_field :hoge, id:"book-image" %>
       </div>
     </div>
     <%# /出品画像 %>
 
     <%# 書籍名と著者名 %>
-    <div class="new-books">
+    <div class="new-book">
       <div class="weight-bold-text">
         書籍名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area "name", class:"book-title", id:"book-name", placeholder:"書籍名（必須）", maxlength:"40" %>
+      <%= f.text_area :image, class:"book-title", id:"book-name", placeholder:"書籍名（必須）", maxlength:"40" %>
       <div class="book-author">
         <div class="weight-bold-text">
           著者
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area "author", class:"book-text", id:"book-info", placeholder:"著者名を入力してください" , maxlength:"30" %>
+        <%= f.text_area :author, class:"book-text", id:"book-info", placeholder:"著者名を入力してください" , maxlength:"30" %>
       </div>
     </div>
     <%# 書籍名と著者名 %>
@@ -43,13 +44,13 @@
     <%# 書籍のあらすじと感想 %>
     <div class="book-contents">
       <div class="weight-bold-text">書籍のあらすじを入力</div>
-        <%= f.text_area "story", class:"book-story", id:"book-story", placeholder:"あらすじを入力してください（必須）", maxlength:"2000" %>
+        <%= f.text_area :story, class:"book-story", id:"book-story", placeholder:"あらすじを入力してください（必須）", maxlength:"2000" %>
       <div class="book-review">
         <div class="weight-bold-text">
           書籍の感想を入力
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area "book-review", class:"book-review", id:"book-review", placeholder:"感想を入力してください" , maxlength:"5000" %>
+        <%= f.text_area :review, class:"book-review", id:"book-review", placeholder:"感想を入力してください" , maxlength:"5000" %>
     </div>
     <%# /商品の詳細 %>
 
@@ -74,8 +75,8 @@
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
     <%# /下部ボタン %>
-  <%# <% end %>
+    <% end %>
   </div>
-
+</div>
 
 <%= render "shared/footer" %>
