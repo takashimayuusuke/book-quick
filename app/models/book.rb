@@ -1,5 +1,7 @@
 class Book < ApplicationRecord
   belongs_to :user
+  has_many :book_authors
+  has_many :authors, thorough: :book_authors
 
   extend ActiveHash::Associations::ActiveRecoedExtensions
   belongs_to :genre
