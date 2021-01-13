@@ -63,7 +63,7 @@
           ジャンルを選択してください
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:delivery_fee_id, DeliveryFee.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"book-genre-status"}) %>
       </div>
     </div>
     <%# /書籍のジャンルについて %>
