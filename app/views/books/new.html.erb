@@ -3,10 +3,10 @@
 
   <div class="book-main">
     <h2 class="items-sell-title">書籍の投稿内容を入力してください</h2>
-    <%= form_with model: @book, local: true do |f| %>
+    <%= form_with( model: @book_author_object, url: books_path, local: true) do |f| %>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-    <%# <%= render 'shared/error_messages', model: f.object %>
+    <%= render 'shared/error_messages', model: @book_author_object %>
     <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
 
     <%# 出品画像 %>
@@ -19,7 +19,7 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :hoge, id:"book-image" %>
+        <%= f.file_field :image, id:"book-image" %>
       </div>
     </div>
     <%# /出品画像 %>
@@ -30,13 +30,13 @@
         書籍名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :image, class:"book-title", id:"book-name", placeholder:"書籍名（必須）", maxlength:"40" %>
+      <%= f.text_area :title, class:"book-title", id:"book-name", placeholder:"書籍名（必須）", maxlength:"40" %>
       <div class="book-author">
         <div class="weight-bold-text">
           著者
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :author, class:"book-text", id:"book-info", placeholder:"著者名を入力してください" , maxlength:"30" %>
+        <%= f.text_area :name, class:"book-text", id:"book-info", placeholder:"著者名を入力してください" , maxlength:"30" %>
       </div>
     </div>
     <%# 書籍名と著者名 %>
