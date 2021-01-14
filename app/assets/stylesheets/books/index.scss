@@ -1,8 +1,13 @@
+a {
+  text-decoration: none;
+}
+
 .main {
   background: #f8f8f8;
 }
 
 .title-contents {
+  font-size: 30px;
   width: 100vw;
   background-image: image-url('book-quick-header01.jpg');
   background-size: cover;
@@ -17,11 +22,16 @@
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
+.service-explain {
+  font-size: 20px;
+  padding: 15px 0 ;
+}
+
 .book-contents {
   background-color: #FFF;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   padding: 10vh 0;
 }
 
@@ -31,4 +41,32 @@
   font-weight: lighter;
 }
 
+.book-lists {
+  width: 100vw;
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: left;
+  padding-left: 10px;
+}
 
+.book-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+}
+
+
+.book-image-content {
+  position: relative;
+  
+}
+
+.book-image {
+  width: 33vh;
+  height: 33vh;
+}
+
+.book-info {
+  color: #333333;
+  font-size: 18px;
+  
+}
