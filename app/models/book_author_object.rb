@@ -15,7 +15,7 @@ class BookAuthorObject
     end
 
     def save
-      book = Book.create(title: title, story: story, review: review, genre_id: genre_id, user_id: user_id)
+      book = Book.create(title: title, story: story, review: review, genre_id: genre_id, image: image, user_id: user_id)
       author = Author.where(name: name).first_or_initialize
       author.save
 
