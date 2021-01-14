@@ -3,10 +3,10 @@
 
   <div class='title-contents'>
     <h1 class='service-title'>
-      失敗しない本選び
+      ブックイックで本の内容と感想を共有
     </h1>
     <p class='service-explain'>
-      ブックイックで本の内容と感想を共有
+      失敗しない本選び
     </P>
     <p class='service-explain'>
       効率的に学びたい方のためのアプリです
@@ -14,37 +14,39 @@
   </div>
 
   <div class='book-contents'>
-    <h2 class='title'>投稿書籍一覧</h2>
+    <h2 class='title'>-投稿書籍一覧-</h2>
     <ul class='book-lists'>
       <li class='list'>
-        <%# <% @books.each do |book| %>
+        <% @books.each do |book| %>
           <%= link_to '#' do %>
+          <div class='book-image-content'>
+          <%= image_tag book.image, class: "book-image" %>
+          </div>
           <div class='book-info'>
-            <h2 class='book-title'>
-              <%= "book-title" %>
-            </h2>
+            <p class='book-title'>
+              <%= "書籍名：#{book.title}" %>
+            </p>
               <div class='book-author'>
-                <%= "book-author" %>
+                <p>著者：<% book.authors.each do |author|  %>
+                    <%= author.name %>
+                <% end %></p>
               </div>
               <div class='book-story'>
-                <%= "story" %>
+                <%= "あらすじ：#{book.story}" %>
               </div>
               <div class="user-name">
-              <%= "user-name"%>
+              <%= "投稿者：#{book.user.name}"%>
               </div>
-          </div>
-          <div class='book-image-content'>
-          <%= image_tag "", class: "item-image" %>
           </div>
 
           </div>
           <% end %>
 
-        <%# <% end %>
+         <% end %>
     </ul>
   </div>
 </div>
-<%= link_to( "#", class: 'purchase-btn') do %>
+<%= link_to( new_book_path, class: 'purchase-btn') do %>
   <%= image_tag 'icon-pen.jpg' , size: '75x75' ,class: "purchase-btn-icon" %>
   <span class='purchase-btn-text'>投稿する</span>
 <% end %>
