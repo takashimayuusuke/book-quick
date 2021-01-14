@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 
   def index
-    @books = BookAuthorObject.includes(:user).order('created_at DESC')
+    @books = Book.includes(:user).order('created_at DESC')
   end
   
   def new
