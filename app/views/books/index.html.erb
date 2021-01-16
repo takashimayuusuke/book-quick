@@ -14,18 +14,20 @@
   </div>
 
   <div class='book-contents'>
+    <div class='book-index'>
     <h2 class='title'>-投稿書籍一覧-</h2>
+    </div>
     <ul class='book-lists'>
-      <li class='list'>
+      <div class='list'>
         <% @books.each do |book| %>
           <%= link_to '#' do %>
           <div class='book-image-content'>
           <%= image_tag book.image, class: "book-image" %>
           </div>
           <div class='book-info'>
-            <p class='book-title'>
-              <%= "書籍名：#{book.title}" %>
-            </p>
+              <p class='book-title'>
+                <%= "書籍名：#{book.title}" %>
+              </p>
               <div class='book-author'>
                 <p>著者：<% book.authors.each do |author|  %>
                     <%= author.name %>
@@ -35,14 +37,12 @@
                 <%= "あらすじ：#{book.story}" %>
               </div>
               <div class="user-name">
-              <%= "投稿者：#{book.user.name}"%>
+                <%= "投稿者：#{book.user.name}"%>
               </div>
-          </div>
-
-          </div>
+            </div>
           <% end %>
-
-         <% end %>
+        <% end %>
+      </div>
     </ul>
   </div>
 </div>
