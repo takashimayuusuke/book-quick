@@ -1,0 +1,60 @@
+<%= render "shared/header" %> 
+
+
+<div class="book-show">
+  <div class="book-box">
+    <div class="show-book-image-content">
+    <%= image_tag @book.image ,class:"show-book-box-img"%>
+    </div>
+    <div class="book-explain">
+    -書籍名-
+    </div>
+    <div class="show-book-title">
+      <%= "#{ @book.title}"%>
+    </div>
+    <div class="book-explain">
+    -著者-
+    </div>
+    <div class="show-book-author">
+      <p><% @book.authors.each do |author|  %>
+      <%= author.name %>
+      <% end %></p>
+    </div>
+    <div class="book-explain">
+    -あらすじ-
+    </div>
+
+    <div class="show-book-story">
+      <%= "#{ @book.story}"%>
+    </div>
+    <div class="book-explain">
+    -感想-
+    </div>
+
+    <div class="show-book-review">
+      <%= "#{ @book.review}"%>
+    </div>
+
+    <div class="edit-destroy-btn">
+    <%= link_to '編集', "#", method: :get, class: "book-edit-btn"%>
+    <%= link_to '削除', "#", method: :delete, class:'book-destroy-btn'%>
+    </div>
+
+  </div>
+
+  <div class="comment-box">
+    <form>
+      <textarea class="comment-text"></textarea>
+      <p class="comment-warn">
+        コメントをする場合は、新規登録、ログインが必要です。
+        <br>
+        コメントをしてみんなで意見を共有しよう！！
+      </p>
+      <button type="submit" class="comment-btn">
+      <span>コメントする<span>
+      </button>
+    </form>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
