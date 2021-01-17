@@ -17,7 +17,7 @@
 }
 
 .book-explain {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   padding: 0px 20px;
   margin: 20px 0;
@@ -27,13 +27,36 @@
 .show-book-title {
   font-size: 20px;
   width: 100vw;
+  padding-left: 10px;
+}
+
+.show-book-author {
+  font-size: 20px;
+  width: 100vw;
+  padding-left: 10px;
+
+}
+
+.show-book-story {
+  font-size: 20px;
+  width: 100vw;
+  padding-left: 10px;
+  
+}
+
+.show-book-review {
+  font-size: 20px;
+  width: 100vw;
+  padding-left: 10px;
+  
 }
 
 .edit-destroy-btn {
   text-align: center;
   font-size: 25px;
   font-weight: bold;
-  margin-top: 40px;
+  margin: 40px 0;
+  border-top: #cdcdcd solid;
 }
 
 .book-edit-btn {
@@ -49,10 +72,12 @@
 
 }
 .comment-box {
-  width: 40vw;
+  width: 50vw;
+  height: 75vh;
   background-color: #fff;
   margin: 5vh 0;
   text-align: center;
+  margin: auto;
 }
 
 .comment-text {
@@ -61,6 +86,7 @@
   padding: 10px;
   border: solid 2px #dedede;
   resize: none;
+  margin-bottom: 30px;
 }
 
 .comment-btn {
@@ -72,5 +98,6 @@
   min-width: 150px;
   font-size: 18px;
   border-radius: 100px;
-  margin-bottom: 2vh;
+  margin: 50px 0 20px 0;
+  cursor: pointer;
 }
