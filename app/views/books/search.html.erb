@@ -1,0 +1,30 @@
+<%= render "shared/header" %> 
+
+    <ul class='book-lists'>
+      <div class='list'>
+        <% @book_records.each do |book| %>
+          <%= link_to book_path(book.id) do %>
+          <div class='book-image-content'>
+          <%= image_tag book.image, class: "book-image" %>
+          </div>
+          <div class='book-info'>
+              <p class='book-title'>
+                <%= "書籍名：#{book.title}" %>
+              </p>
+              <p class='book-author'>
+                <%= "著者：#{book.author}" %>
+              </p>
+              <div class='book-story'>
+                <%= "あらすじ：#{book.story}" %>
+              </div>
+              <div class="user-name">
+                <%= "投稿者：#{book.user.name}"%>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </ul>
+
+
+<%= render "shared/footer" %>
