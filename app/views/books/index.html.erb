@@ -28,11 +28,9 @@
               <p class='book-title'>
                 <%= "書籍名：#{book.title}" %>
               </p>
-              <div class='book-author'>
-                <p>著者：<% book.authors.each do |author|  %>
-                    <%= author.name %>
-                <% end %></p>
-              </div>
+              <p class='book-author'>
+                <%= "著者：#{book.author}" %>
+              </p>
               <div class='book-story'>
                 <%= "あらすじ：#{book.story}" %>
               </div>
