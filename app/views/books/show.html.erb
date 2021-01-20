@@ -16,9 +16,7 @@
     -著者-
     </div>
     <div class="show-book-author">
-      <p><% @book.authors.each do |author|  %>
-      <%= author.name %>
-      <% end %></p>
+      <%= @book.author %>
     </div>
     <div class="book-explain">
     -あらすじ-
@@ -36,8 +34,8 @@
     </div>
 
     <div class="edit-destroy-btn">
-    <%= link_to '編集', "#", method: :get, class: "book-edit-btn"%>
-    <%= link_to '削除', "#", method: :delete, class:'book-destroy-btn'%>
+    <%= link_to '編集', edit_book_path(@book.id), method: :get, class: "book-edit-btn"%>
+    <%= link_to '削除', book_path, method: :delete, class:'book-destroy-btn'%>
     </div>
 
   </div>
