@@ -18,4 +18,13 @@ class User < ApplicationRecord
     validates :name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
     validates :birth
   end
+
+  def self.search(search)
+    if search != ""
+      User.where('name LIKE(?) or nickname LIKE(?)' , "%#{search}%", "%#{search}%")
+    else
+      Book.all
+    end
+  end
+
 end
