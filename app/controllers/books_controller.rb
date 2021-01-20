@@ -48,6 +48,25 @@ class BooksController < ApplicationController
 
   def search
     @books = Book.search(params[:keyword])
+    @users = User.search(params[:keyword])
+    @book_records = []
+
+    
+    @books.each do|book|
+      @book_records << book
+    end
+
+    @users.each do|user|
+      user.books.each do|book|
+        @book_records << book
+      end
+    end
+
+    @book_records = @book_records.uniq
+
+
+
+    
   end
   
   private
