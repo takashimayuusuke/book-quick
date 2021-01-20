@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_13_053817) do
+ActiveRecord::Schema.define(version: 2021_01_13_023215) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -33,23 +33,9 @@ ActiveRecord::Schema.define(version: 2021_01_13_053817) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "book_authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "book_id"
-    t.bigint "author_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["author_id"], name: "index_book_authors_on_author_id"
-    t.index ["book_id"], name: "index_book_authors_on_book_id"
-  end
-
   create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
+    t.string "author", null: false
     t.text "story", null: false
     t.text "review", null: false
     t.integer "genre_id", null: false
@@ -76,7 +62,5 @@ ActiveRecord::Schema.define(version: 2021_01_13_053817) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "book_authors", "authors"
-  add_foreign_key "book_authors", "books"
   add_foreign_key "books", "users"
 end
