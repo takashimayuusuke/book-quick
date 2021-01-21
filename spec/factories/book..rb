@@ -5,9 +5,11 @@ FactoryBot.define do
     story      { 'あらすじ ' }
     review     { 'とても良い本でした ' }
     genre_id   { 2 }
+    association :user
 
     after(:build) do |book|
       book.image.attach(io: File.open('public/images/test.png'), filename: 'test.png')
     end
   end
 end
+ 
