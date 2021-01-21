@@ -188,11 +188,9 @@
 ## :books: ローカルでの動作方法
 
 ## :books: 開発環境
-### rubyバージョン
+VScode
 ruby 2.6.5
-
-### ruby_on_railsバージョン
 rails 6.0.0
-
-### データベース
 mysql 5.6.50
+javascript
+
