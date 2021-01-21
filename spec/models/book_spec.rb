@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe BookAuthorObject, type: :model do
+RSpec.describe Book, type: :model do
   describe '書籍投稿情報の保存' do
     before do
-      @book_author_object = FactoryBot.build(:book_author_object)
+      @book_author_object = FactoryBot.build(:book)
     end
 
     it '書籍名、あらすじ、感想、ジャンル、著者名、書籍画像１枚が存在すれば登録できる' do
