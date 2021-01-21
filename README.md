@@ -1,26 +1,29 @@
 # README
 
-## アプリケーション名
+## :books: Book-quick(ブックイック)
+#### 書籍の内容を把握した状態での購入を支援するアプリケーションです。
 
-Book-quick(ブックイック)
+## :books: アプリケーション概要
+![Book-quick](https://gyazo.com/5432cee49205939a2aef97aa5a68e9bf "Book-quick")
 
-## アプリケーション概要
 
-このアプリケーションで出来ることは、気になっている書籍の購入を手助けするアプリです。
 
-## URL
 
-## テスト用アカウント
+#### このアプリケーションは、気になっている書籍のあらすじや感想を共有し、効率的な購入を手助けするアプリです。
+ベストセラーになっている書籍が、自分の得たい学びが書かれているとは限りません。気になる本の内容をより深く投稿・共有することで、効率よく学びを得ることを加速させます。
 
-## 利用方法
+## :books: URL
 
-書籍の内容を把握した状態での購入を支援するアプリケーションです。
+## :books: テスト用アカウント
 
-## 目指した課題解決
+## :books: 利用方法
+
+
+## :books: 目指した課題解決
 
 キャリアアップをしたいと考えているひとが、書店にいく時間がない、書籍の内容を知ってから安心して購入をしたい、書籍の購入で失敗をしたくないと考えているユーザーの課題を解決したいと考えました。
 
-## 洗い出した要件
+## :books: 洗い出した要件
 
 | 実装したい機能         | トップページ                       |
 | ---------------------- | ---------------------------------- |
@@ -28,7 +31,7 @@ Book-quick(ブックイック)
 |                        | ログイン時にはサインアウトボタン   |
 |                        | 新規投稿ボタン                     |
 |                        | ジャンル検索ボタン                 |
-|                        | フリーワード検索ボタン             |
+|                        | フリーワード検索フォーム           |
 |      (表示)            | 投稿の一覧表示                     |
 |                        | 書籍名表示                         |
 |                        | 書籍の画像表示                     |
@@ -123,7 +126,20 @@ Book-quick(ブックイック)
 |                        | フリーワード検索表示               |
 
 
-## 実装した機能についての説明
+## :books: 実装した機能についての説明
+
++ トップページから新規登録・ログインできます
++ ログイン状態でトップページに遷移します
++ 新規投稿は右下の投稿するマークをクリックします
++ 投稿完了後は一覧ページに戻ります
++ 投稿内容をクリックすると詳細ページへ遷移します
+
+![Book-quick](https://i.gyazo.com/55e53b27befcc34aacb0577865f209d5.gif "Book-quick")
+
+![Book-quick](https://i.gyazo.com/02903d84356124b9b233cc7587db8690.gif "Book-quick")
+
+![Book-quick](https://i.gyazo.com/c0c0954ef26c3a34a531ad64da94f00a.gif "Book-quick")
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -131,6 +147,7 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+
 
 * System dependencies
 
@@ -169,7 +186,7 @@ Things you may want to cover:
 | Column            | Type         | Options           |
 | ----------------- | ------------ | ----------------- |
 | title             | string       | null: false       |
-| link_to_buy       | string       | null: false       |
+| author            | string       | null: false       |
 | story             | text         | null: false       |
 | review            | text         | null: false       |
 | genre_id          | integer      | null: false       |
@@ -180,31 +197,7 @@ Things you may want to cover:
 
 - belongs_to :user
 - has_many :comments
-- has_many :authors, through :book_authors
-- has_many :book_authors
 
-## authors テーブル
-
-| Column           | Type           | Options         |
-| ---------------- | -------------- | --------------- |
-| name             | string         | null: false     |
-
-### Associations
-
-- has_many :books, through :book_authors
-- has_many :book_authors
-
-## book_authors テーブル
-
-| Column           | Type           | Options                        |
-| ---------------- | -------------- | ------------------------------ |
-| book             | references     | null :false, foreign_key: true |
-| author           | references     | null :false, foreign_key: true |
-
-### Associations
-
-- belongs_to :book
-- belongs_to :author
 
 ## comments テーブル
 
@@ -219,4 +212,14 @@ Things you may want to cover:
 - belongs_to :user
 - belongs_to :book
 
+## :books: ローカルでの動作方法
 
+## :books: 開発環境
+### rubyバージョン
+ruby 2.6.5
+
+### ruby_on_railsバージョン
+rails 6.0.0
+
+### データベース
+mysql 5.6.50
