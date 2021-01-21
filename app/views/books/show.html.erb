@@ -33,10 +33,16 @@
       <%= "#{ @book.review}"%>
     </div>
 
+    <% if user_signed_in? && current_user.id == @book.user.id %>
+
+
     <div class="edit-destroy-btn">
     <%= link_to '編集', edit_book_path(@book.id), method: :get, class: "book-edit-btn"%>
     <%= link_to '削除', book_path, method: :delete, class:'book-destroy-btn'%>
     </div>
+    <% else %>
+    <% end %>
+
 
   </div>
 

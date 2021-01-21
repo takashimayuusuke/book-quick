@@ -9,6 +9,7 @@ a {
 .title-contents {
   font-size: 30px;
   width: 100vw;
+  height: 40vh;
   background-image: image-url('book-quick-header01.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -54,6 +55,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
+  text-align: center;
 }
 
 
@@ -72,6 +74,7 @@ a {
 
 .book-info {
   font-size: 100%;
+  text-align: center;
 }
 
 p.book-title {
@@ -82,7 +85,6 @@ p.book-title {
   width: 25vw;
   border: none;
   font-size: 20px;
-  text-align: left;
 }
 
 .book-author {
@@ -92,7 +94,6 @@ p.book-title {
   width: 25vw;
   border: none;
   font-size: 15px;
-  text-align: left;
   margin-bottom: 10px;
 
 }
@@ -104,7 +105,6 @@ p.book-title {
   margin: 0 20px;
   border: none;
   font-size: 15px;
-  text-align: left;
   margin-bottom: 10px
 }
 

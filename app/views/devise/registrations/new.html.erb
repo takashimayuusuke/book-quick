@@ -5,7 +5,7 @@
    <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="form-group">
-    <h2 class="new-regi">ユーザー新規登録</h2>
+    <h2 class="new-regi">-ユーザー新規登録-</h2>
     <div class='form-text-wrap'>
       <label class="form-text">ニックネーム</label>
       <span class="indispensable">必須</span>
@@ -57,9 +57,9 @@
       <label class="form-text">生年月日</label>
       <span class="indispensable">必須</span>
     </div>
-    <div class='input-birth-wrap'>
-      <%= raw sprintf(
-                  f.date_select(
+      <div class='input-birth-wrap'>
+        <%= raw sprintf(
+                    f.date_select(
                     :birth,
                     class:'select-birth',
                     id:"birth-date",
@@ -69,9 +69,10 @@
                     end_year: (Time.now.year - 5),
                     date_separator: '%s'),
                   "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+      </div>
     </div>
   <div class="actions">
-    <%= f.submit "会員登録",class:"register-red-btn"%>
+    <%= f.submit "会員登録",class:"register-btn"%>
   </div>
 <% end %>
 
