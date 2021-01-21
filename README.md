@@ -4,7 +4,7 @@
 #### 書籍の内容を把握した状態での購入を支援するアプリケーションです。
 
 ## :books: アプリケーション概要
-![Book-quick](https://gyazo.com/5432cee49205939a2aef97aa5a68e9bf "Book-quick")
+![Book-quick](https://i.gyazo.com/5432cee49205939a2aef97aa5a68e9bf.jpg "Book-quick")
 
 
 
