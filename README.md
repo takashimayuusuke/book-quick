@@ -134,15 +134,8 @@
 + 投稿完了後は一覧ページに戻ります
 + 投稿内容をクリックすると詳細ページへ遷移します
 
-![Book-quick](https://i.gyazo.com/55e53b27befcc34aacb0577865f209d5.gif "Book-quick")
-
 
 ![Book-quick](https://i.gyazo.com/02903d84356124b9b233cc7587db8690.gif "Book-quick")
-
-
-![Book-quick](https://i.gyazo.com/c0c0954ef26c3a34a531ad64da94f00a.gif "Book-quick")
-
-
 
 
 ## users テーブル
