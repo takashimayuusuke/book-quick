@@ -138,7 +138,7 @@
 
 ![Book-quick](https://i.gyazo.com/02903d84356124b9b233cc7587db8690.gif "Book-quick")
 
-![Book-quick](https://i.gyazo.com/c0c0954ef26c3a34a531ad64da94f00a.gif "Book-quick")
+![Book-quick](https://gyazo.com/d1ed3bbafcb6f8ce0adbceab38cb41fc "Book-quick")
 
 
 This README would normally document whatever steps are necessary to get the
