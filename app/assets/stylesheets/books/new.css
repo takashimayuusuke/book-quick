@@ -40,6 +40,11 @@
 .click-upload>p {
   margin-bottom: 15px;
 } 
+
+img {
+  height: 100px;
+  width: 100px;
+}
 .new-book {
   padding: 2vh 0;
 }
