@@ -174,11 +174,11 @@
 
 ## comments テーブル
 
-| Column           | Type           | Options                        |
-| ---------------- | -------------- | ------------------------------ |
-| content          | string         |                                |
-| user             | references     | null :false, foreign_key: true |
-| book             | references     | null :false, foreign_key: true |
+| Column           | Type           | Options |
+| ---------------- | -------------- | ------- |
+| content          | text           |         |
+| user_id          | integer        |         |
+| book_id          | integer        |         |
 
 ### Associations
 

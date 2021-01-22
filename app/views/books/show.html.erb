@@ -47,17 +47,25 @@
   </div>
 
   <div class="comment-box">
-    <form>
-      <textarea class="comment-text"></textarea>
-      <p class="comment-warn">
-        コメントをする場合は、新規登録、ログインが必要です。
-        <br>
-        コメントをしてみんなで意見を共有しよう！！
-      </p>
-      <button type="submit" class="comment-btn">
-      <span>コメントする<span>
-      </button>
-    </form>
+    <%= form_with(model: [@book, @comment], local: true) do|form| %>
+      <%= form.text_area :content, class: "comment-text",id: "comment-text", placeholder: "コメントする", rows: "2" %>
+      <%= form.submit "コメントする", class: "comment-btn" %>
+      <% end %>
+      <div class = "comments" >
+        <div class = "comment-list">
+          -コメント一覧-
+        </div>
+        <% @comments.each do|comment| %>
+        <div class="comment">
+          <div class="comment-text">
+          <%= comment.content %>
+          ：投稿者
+          <%= comment.user.nickname%>
+          </div>
+        </div>
+
+        <% end %>
+      </div>
   </div>
 </div>
 
