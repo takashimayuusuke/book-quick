@@ -109,5 +109,18 @@
   margin: 20px 0;
   /* background-color: lightgray; */
 
+}
+
+.back {
+  text-align: center;
+  margin: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  
+}
+
+.book_back_btn {
+  color: #3b3b3b;
 
 }
