@@ -5,6 +5,8 @@ class BooksController < ApplicationController
 
   before_action :contributor_confirmation, only: [:edit, :update, :destroy]
 
+
+
   
   def index
     @books = Book.includes(:user).order('created_at DESC')
@@ -86,6 +88,11 @@ class BooksController < ApplicationController
   def contributor_confirmation
     redirect_to root_path unless current_user.id == @book.user.id
   end
+
+  def contributor_confirmation
+    redirect_to root_path unless current_user.id == @book.user.id
+  end
+
 
 
 end
