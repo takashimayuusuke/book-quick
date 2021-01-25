@@ -200,13 +200,13 @@
 
 ## :books: ローカルでの動作方法
 
-% git clone https://github.com/takashimayuusuke/book-quick.git
-% cd book-quick
-% bundle install
-% rails db:create
-% rails db:migrate
-% rails s
-👉 http://localhost:3000
++ % git clone https://github.com/takashimayuusuke/book-quick.git
++ % cd book-quick
++ % bundle install
++ % rails db:create
++ % rails db:migrate
++ % rails s
++ 👉 http://localhost:3000
 
 
 
