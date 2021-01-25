@@ -17,7 +17,22 @@
 
 ## :books: テスト用アカウント
 
-## :books: 利用方法
+
+
+## :books: 実装した機能についての説明
+
++ トップページから新規登録・ログインできます
++ ログイン状態でトップページに遷移します
++ 新規投稿は右下の投稿するマークをクリックします
++ 投稿完了後は一覧ページに戻ります
++ 投稿内容をクリックすると詳細ページへ遷移します
++ 投稿詳細ページではコメントを投稿することができます。
++ 検索フォームに著者名や書籍名を入力すると一致したものを表示することができます。
+
+
+![Book-quick](https://i.gyazo.com/02903d84356124b9b233cc7587db8690.gif "Book-quick")
+
+
 
 
 ## :books: 目指した課題解決
@@ -127,16 +142,6 @@
 |                        | フリーワード検索表示               |
 
 
-## :books: 実装した機能についての説明
-
-+ トップページから新規登録・ログインできます
-+ ログイン状態でトップページに遷移します
-+ 新規投稿は右下の投稿するマークをクリックします
-+ 投稿完了後は一覧ページに戻ります
-+ 投稿内容をクリックすると詳細ページへ遷移します
-
-
-![Book-quick](https://i.gyazo.com/02903d84356124b9b233cc7587db8690.gif "Book-quick")
 
 
 ## users テーブル
@@ -186,7 +191,24 @@
 - belongs_to :user
 - belongs_to :book
 
+
+
+## :books: 追加予定機能
+
++ ジャンル一覧からの検索機能
++ ECサイトへのリンク機能
+
 ## :books: ローカルでの動作方法
+
+% git clone https://github.com/takashimayuusuke/book-quick.git
+% cd book-quick
+% bundle install
+% rails db:create
+% rails db:migrate
+% rails s
+👉 http://localhost:3000
+
+
 
 ## :books: 開発環境
 + VScode
