@@ -188,9 +188,9 @@
 ## :books: ローカルでの動作方法
 
 ## :books: 開発環境
-VScode
-ruby 2.6.5
-rails 6.0.0
-mysql 5.6.50
-javascript
++ VScode
++ ruby 2.6.5
++ rails 6.0.0
++ mysql 5.6.50
++ javascript
 
