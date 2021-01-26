@@ -41,11 +41,10 @@
 ![Book-quick](https://i.gyazo.com/02903d84356124b9b233cc7587db8690.gif "Book-quick")
 
 + 投稿詳細ページではコメントを投稿することができます。
+
+[![Image from Gyazo](https://i.gyazo.com/8b0f60a9efa218878cd14cd0d2e9e97f.gif)](https://gyazo.com/8b0f60a9efa218878cd14cd0d2e9e97f)
 + 検索フォームに著者名や書籍名を入力すると一致したものを表示することができます。
 [![Image from Gyazo](https://i.gyazo.com/ff4a69161133018153a4fe469f5bd3d8.gif)](https://gyazo.com/ff4a69161133018153a4fe469f5bd3d8)
-
-
-
 
 
 
