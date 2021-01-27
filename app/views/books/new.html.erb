@@ -26,14 +26,14 @@
     <div class="new-book">
       <div class="book-title">
         <div class="weight-bold-text">
-          書籍名
+          <label for="title">書籍名</label>
         <span class="indispensable">必須</span>
         </div>
       </div>
       <%= f.text_area :title, class: "title",id:"title", placeholder:"書籍名", maxlength:"40" %>
       <div class="book-author">
         <div class="weight-bold-text">
-          著者
+          <label for="author">著者</label>
           <span class="indispensable">必須</span>
         </div>
       </div>
@@ -41,14 +41,14 @@
 
       <div class='book-story'>
         <div class="weight-bold-text">
-          書籍のあらすじを入力
+          <label for="story">書籍のあらすじを入力</label>
           <span class="indispensable">必須</span>
         </div>
       </div>
         <%= f.text_area :story, class:"story", id:"story", placeholder:"あらすじを入力してください", maxlength:"2000" %>
       <div class="review">
         <div class="weight-bold-text">
-          書籍の感想を入力
+          <label for="book-review">書籍の感想を入力</label>
           <span class="indispensable">必須</span>
         </div>
         <%= f.text_area :review, class:"book-review", id:"book-review", placeholder:"感想を入力してください" , maxlength:"5000" %>
