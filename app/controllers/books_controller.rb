@@ -3,6 +3,8 @@ class BooksController < ApplicationController
 
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
+  before_action :set_genre
+
   before_action :contributor_confirmation, only: [:edit, :update, :destroy]
 
 
@@ -83,6 +85,10 @@ class BooksController < ApplicationController
   def set_book
     @book = Book.find(params[:id])
 
+  end
+
+  def set_genre
+    @genre = Genre.all
   end
 
   def contributor_confirmation
