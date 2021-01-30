@@ -14,16 +14,16 @@
     <div class='nav'>
       <ul class='lists-left'>
         <li><%= link_to 'ジャンル一覧', "#", class:"genre-list", id:"genre-list" %></li>
+        <ul class="show-genre hidden", id="pull-down">
+          <% if user_signed_in?%>
+          <% @genre.each do |genre| %>
+            <%=link_to( search_books_path, class: "genre-search") do %>
+            <li><%= genre.name%></li>
+            <% end %>
+          <% end %>
+          <% end %>
+        </ul>
       </ul>
-        <div class="sub-nav">
-          <ul class="show-genre hidden", id="pull-down">
-            <% if user_signed_in?%>
-            <% @genre.each do |genre| %>
-              <li><%= genre.name%></li>
-            <% end %>
-            <% end %>
-          </ul>
-        </div>
       <ul class='lists-right'>
         <% if user_signed_in? %>
         <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li> 
