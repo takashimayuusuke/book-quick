@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+
+    member do
+      get 'sort'
+    end
     resources :comments, only: :create
 
   end
