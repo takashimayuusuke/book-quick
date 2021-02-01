@@ -74,6 +74,7 @@ color: #fff;
 .lists-left {
   text-align: right;
   min-width: 200px;
+  position: relative;
 
 }
 
@@ -114,4 +115,24 @@ color: #fff;
 .sign-up {
   text-decoration: none;
   color: #fff;
+}
+
+
+.show-genre {
+  background-color: whitesmoke;
+  padding: 20px;
+  display: block;
+  text-align: left;
+}
+
+
+.show-genre {
+  position: absolute;
+}
+.hidden {
+  display: none;
+}
+
+.genre-search {
+  color: #2f3336;
 }

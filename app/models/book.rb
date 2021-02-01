@@ -10,6 +10,10 @@ class Book < ApplicationRecord
       Book.all
     end
   end
+
+  def self.sort(sort)
+      Book.where('genre_id LIKE(?)', "#{sort}")
+  end
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre

@@ -1,9 +1,9 @@
- 
 <%= render "shared/header" %> 
 
     <ul class='book-lists'>
       <div class='list'>
-        <% @book_records.each do |book| %>
+        <% if @books.length !=   0 %>
+        <% @books.each do |book| %>
           <%= link_to book_path(book.id) do %>
           <div class='book-image-content'>
           <%= image_tag book.image, class: "book-image" %>
@@ -24,8 +24,17 @@
             </div>
           <% end %>
         <% end %>
+        <% else %>
+        <div class="no-sort">
+          <ul class="sort-message">指定されたジャンルの投稿はまだされていません。
+          </ul>
+        </div>
+        <% end %>
       </div>
     </ul>
+  <div class= "back">
+    <%= link_to '一覧に戻る', root_path, class: "book_back_btn" %>
+  </div>
 
 
 <%= render "shared/footer" %>

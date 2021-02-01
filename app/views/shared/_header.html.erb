@@ -6,14 +6,25 @@
     </div>
     <div class='search-bar-contents'>
       <%= form_with(url: search_books_path, method: :get, local: true, class: "search-form") do |form|%>
-        <%= form.text_field :keyword, placeholder: 'キーワードから探す', class:'input-box'%>
+        <%= form.text_field :keyword, placeholder: '書籍名、または著者名を入力してください', class:'input-box'%>
         <%= form.submit '検索', class:"search-icon" %>
       <% end %>
     </div>
   </div>
     <div class='nav'>
       <ul class='lists-left'>
-        <li><%= link_to 'ジャンル一覧', "#", class:"genre-list"%></li>
+        <li><%= link_to 'ジャンル一覧', "#", class:"genre-list", id:"genre-list" %></li>
+        <ul class="show-genre hidden", id="pull-down">
+          <% if user_signed_in?%>
+          <% @genre.each do |genre| %>
+            <% if genre.id != 1%>
+              <%=link_to( sort_book_path(genre), class: "genre-search") do %>
+              <li><%= genre.name%></li>
+              <% end%>
+            <% end %>
+          <% end %>
+          <% end %>
+        </ul>
       </ul>
       <ul class='lists-right'>
         <% if user_signed_in? %>
