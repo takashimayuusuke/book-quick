@@ -28,12 +28,13 @@
         <div class="no-sort">
           <ul class="sort-message">指定されたジャンルの投稿はまだされていません。
           </ul>
-          <%= link_to '一覧に戻る', root_path, class: "book_back_btn" %>
         </div>
-
         <% end %>
       </div>
     </ul>
+  <div class= "back">
+    <%= link_to '一覧に戻る', root_path, class: "book_back_btn" %>
+  </div>
 
 
 <%= render "shared/footer" %>
