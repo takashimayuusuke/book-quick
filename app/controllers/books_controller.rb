@@ -11,6 +11,7 @@ class BooksController < ApplicationController
 
   
   def index
+
     @books = Book.includes(:user).order('created_at DESC')
   end
 
@@ -69,12 +70,12 @@ class BooksController < ApplicationController
     end
 
     @book_records = @book_records.uniq
-
-
-
-    
   end
   
+  def sort 
+    @books = Book.sort(params[:id])
+  end
+
   private
   
   def book_params
